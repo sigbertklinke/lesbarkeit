@@ -72,7 +72,7 @@ sub AnalyzeSentence {
     my @word2 = ();
     $sent = {};
     @wordlist = split (/ +/, $sentence);
-    $swd = $#wordlist;
+    $swd = @wordlist;
     $slw = 0;
     $sos = 0;
     $ssl = 0;
@@ -94,7 +94,7 @@ sub AnalyzeSentence {
 
 	$ssl += $sylabels;
 	@cl = split (//, $word);
-	if ($#cl>5) { $slw++; }
+	if (@cl>5) { $slw++; }
 	if ($sylabels==1) { $sos++; }
 	if ($sylabels>2) { $ssy++; }
     }
@@ -125,10 +125,9 @@ sub AnalyzeText {
     foreach $paragraph (@paragraphs) {
 	print "$paragraph\n";
     }
-    foreach $paragraph (@paragraphs) {
-	$paragraph = encode_entities($paragraph);
-    }
-    print "$#paragraphs paragraphs\n";
+
+    my $np = @paragraphs;
+    print "$np paragraphs\n";
     return (@paragraphs);
 }
 
@@ -153,7 +152,7 @@ foreach $line (@paragraphs) {
     $loopitem->{'linktxt'} = substr($line, 0, 35);
     $loopitem->{'paragraphno'} = $paragraphno++;
 
-#    ChangeSpecialCharacter ();
+    ChangeSpecialCharacter ();
     @sentencelist = SplitSentences();
 
     $ass = 0;
@@ -174,7 +173,7 @@ foreach $line (@paragraphs) {
 	$asl += $ssl;
 	$asy += $ssy;
     }       
-    $loopitem->{'SENTENCE'} = \@sloop;
+    $loopitem->{'SENTENCE'} =  encode_entities(\@sloop);
     $loopitem->{'ass'}    = $ass;
     $loopitem->{'awd'}    = $awd;
     $loopitem->{'alw'}    = $alw;

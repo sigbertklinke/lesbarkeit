@@ -23,5 +23,5 @@ Installieren Sie die vier Dateien in einem eignen Verzeichnis. Es wird eine aktu
 
 # Rechtliche Hinweise
 
-* Falls Sie die Ergebnisse der Analysen publizieren wollen, beachten Sie die Urheberechte der verwendeten Texte.
+* Falls Sie die Ergebnisse der Analysen publizieren wollen, beachten Sie die Urheberrechte der verwendeten Texte.
 * Die Software steht unter der Apache License, Version 2.0, näheres siehe [LICENCE](LICENCE).
