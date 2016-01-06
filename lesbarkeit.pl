@@ -14,12 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+use Encode;
 use HTML::Template;
+use HTML::Entities;
+use File::Slurp;
 
 sub ReadFile {
     my ($fname) = @_;
     my ($fcont);
-    open (FILE, "<$fname") || die ("Can not open file: $fname");
+    open (FILE, "<:encoding(UTF-8)", $fname) || die ("Can not open file: $fname");
     undef $/;
     $fcont = <FILE>;
     close (FILE);
@@ -122,6 +125,9 @@ sub AnalyzeText {
     foreach $paragraph (@paragraphs) {
 	print "$paragraph\n";
     }
+    foreach $paragraph (@paragraphs) {
+	$paragraph = encode_entities($paragraph);
+    }
     print "$#paragraphs paragraphs\n";
     return (@paragraphs);
 }
@@ -129,7 +135,6 @@ sub AnalyzeText {
 $fname = $ARGV[0];
 
 @paragraphs = AnalyzeText (ReadFile ("$fname.txt"));
-
 
 $template = HTML::Template->new(filename => 'base.htm', option => 'value', global_vars => 1, die_on_bad_params => 0);
 
@@ -148,7 +153,7 @@ foreach $line (@paragraphs) {
     $loopitem->{'linktxt'} = substr($line, 0, 35);
     $loopitem->{'paragraphno'} = $paragraphno++;
 
-    ChangeSpecialCharacter ();
+#    ChangeSpecialCharacter ();
     @sentencelist = SplitSentences();
 
     $ass = 0;

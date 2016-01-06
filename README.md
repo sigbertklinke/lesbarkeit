@@ -1,12 +1,14 @@
 # Zweck
 
-Das Perl Skript erzeugt aus einer ASCII-Textdatei eine HTML-Datei, die für den gesamten Text, jeden Paragraphen und jeden Satz verschiedene Formeln zu Berechnung der Lesbarkeit berechnet. Hohe Werte bedeuten in der Regel schwieriger zu lesenden Texte und kleine Werte einfacher zu lesenden Texte.  
+Das Perl Skript erzeugt aus einer UTF8-Textdatei eine HTML-Datei, die für den gesamten Text, jeden Paragraphen und jeden Satz verschiedene Formeln zu Berechnung der Lesbarkeit berechnet. Hohe Werte bedeuten in der Regel schwieriger zu lesenden Texte und kleine Werte einfacher zu lesenden Texte.  
 
 # Aufruf
 
 `perl lesbarkeit.pl meintext`
 
 erzeugt aus der Datei `meintext.txt` die Datei `meintext.htm`.
+
+Hinweis: Während der Skriptausführung wird die Textdatei ausgegeben sowie die Anzahl der Paragraphen. Umlaute werden u.U. nicht korrekt dargestellt, aber in der HTML-Datei sollten sie korrekt angezeigt werden.
 
 # Installation
 
