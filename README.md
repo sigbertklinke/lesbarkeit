@@ -1,6 +1,6 @@
 # Zweck
 
-Das Perl Skript erzeugt aus einer UTF8-Textdatei eine HTML-Datei, die für den gesamten Text, jeden Paragraphen und jeden Satz verschiedene Formeln zu Berechnung der Lesbarkeit berechnet. Hohe Werte bedeuten in der Regel schwieriger zu lesenden Texte und kleine Werte einfacher zu lesenden Texte.  
+Das Perl Skript erzeugt aus einer UTF8-Textdatei eine HTML-Datei, die für den gesamten Text, jeden Paragraphen und jeden Satz verschiedene Formeln bzgl. Lesbarkeit berechnet. Hohe Werte bedeuten in der Regel schwieriger zu lesenden Texte und kleine Werte einfacher zu lesenden Texte.  
 
 # Aufruf
 
@@ -24,4 +24,4 @@ Installieren Sie die vier Dateien in einem eignen Verzeichnis. Es wird eine aktu
 # Rechtliche Hinweise
 
 * Falls Sie die Ergebnisse der Analysen publizieren wollen, beachten Sie die Urheberrechte der verwendeten Texte.
-* Die Software steht unter der Apache License, Version 2.0, näheres siehe [LICENCE](LICENCE).
+* Die Software steht unter der Apache License, Version 2.0, näheres siehe [LICENSE](LICENSE).
