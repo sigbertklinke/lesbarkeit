@@ -1,0 +1,13 @@
+Verfahren des hypothetischen Schließens. Es geht zurück auf Charles Sanders Peirce und wurde im Rahmen der qualitativen Sozialforschung in Deutschland wiederentdeckt.
+
+Der abduktive Schluss sucht zu einer gegebenen Beobachtung eine mögliche allgemeine Gesetzmäßigkeit, die diese Beobachtung erklären könnte. Bsp.:
+
+Beobachtung: Cäsar ist sterblich.
+Denkbare Erklärung: Alle Menschen sind sterblich.
+Hypothetische Schlussfolgerung: Cäsar ist ein Mensch (und deshalb sterblich).
+
+Diese Schlussfolgerung ist deshalb hypothetisch oder problematisch (oder deutlicher gesprochen: nicht mit Sicherheit gültig), weil die Erklärung (Gesetzmäßigkeit) »Alle Menschen sind sterblich« im Allgemeinen eine logische Implikation darstellt. Anders gesagt: Es sind nicht nur die Menschen sterblich, sondern auch die Tiere und Pflanzen; nach Auffassung mancher sogar die Götter. Das macht aber den abduktiven Schluss auch spannend: Spricht die Tatsache, dass Cäsar sterblich ist, dafür, dass er (doch nur) ein Mensch ist? Oder vielleicht doch dafür, dass auch Götter sterblich sein können?
+
+Die neuere Diskussion um den abduktiven Schluss wurde in Deutschland vor allem ausgelöst von U. Oevermann, der darin ein Verfahren sieht, im Rahmen der qualitativen Sozialforschung zu logisch abgesicherten Schlussfolgerungen zu kommen. J. Reichertz (1991) bestritt diesen Anspruch, indem er postulierte, dass unter Abduktion vor allem der Fall zu verstehen sei, dass es sich bei den erschlossenen (hypothetischen) Gesetzeszusammenhang um einen neuen, bislang unbekannten Zusammenhang handele, der sich per definitionem einer eindeutigen Absicherung verschließe.
+
+Reichertz kam zu dieser Schlussfolgerung, indem er den »späten« gegen den »frühen« Peirce ausspielte. Tatsächlich liegt das Problem aber anderswo: Die Ungesichertheit des abduktiven Schlusses beruht darauf, dass es prinzipiell nicht sicher ist, dass der Forscher unter der unendlichen Vielzahl der möglichen Gesetzmäßigkeiten gerade die richtige ausgewählt hat. Befinden sich unter den hypothetisch erwogenen Gesetzmäßigkeiten nur falsche Erklärungen, so kann auch im (auf den abduktiven Schluss folgenden) Prozess des Ausscheidens unzutreffender Hypothesen nicht am Ende die zutreffende Erklärung übrig bleiben.

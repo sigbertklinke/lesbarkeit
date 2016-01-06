@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Lesbarkeitsanalyse von <TMPL_VAR NAME="fname"></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<a name="0"></a> 
+<table border="1">
+  <tr> 
+    <td><strong><a href="#amdahl">Amdahl</a></strong></td>
+    <td><strong><a href="#smog">SMOG</a></strong></td>
+    <td><strong><a href="#wstf">1. WSTF</a></strong></td>
+    <td><strong>S&auml;tze</strong></td>
+    <td><strong>Worte</strong></td>
+    <td><strong>Lange Worte</strong></td>
+    <td><strong>Einsilbige Worte</strong></td>
+    <td><strong>Silben</strong></td>
+    <td><strong>Lange Silben</strong></td>
+    <td><strong>Absatztext</strong></td>
+  </tr>
+    <tr> 
+    <td align="right"><strong><TMPL_VAR NAME="amdahl"></strong><!--amdahl=<TMPL_VAR NAME="amdahl">--></td>
+    <td align="right"><strong><TMPL_VAR NAME="smog"></strong><!--smog=<TMPL_VAR NAME="smog">--></td>
+    <td align="right"><strong><TMPL_VAR NAME="wstf"></strong><!--wstf=<TMPL_VAR NAME="wstf">--></td>
+    <td align="right"><strong><TMPL_VAR NAME="tss"></strong></td>
+    <td align="right"><strong><TMPL_VAR NAME="twd"></strong></td>
+    <td align="right"><strong><TMPL_VAR NAME="tlw"></strong></td>
+    <td align="right"><strong><TMPL_VAR NAME="tos"></strong></td>
+    <td align="right"><strong><TMPL_VAR NAME="tsl"></strong></td>
+    <td align="right"><strong><TMPL_VAR NAME="tsy"></strong></td>
+    <td><strong>GESAMTTEXT</strong></td>
+  </tr>
+  <TMPL_LOOP NAME=PARAGRAPH> 
+  <tr> 
+    <td align="right"><TMPL_VAR NAME="amdahl"></td>
+    <td align="right"><TMPL_VAR NAME="smog"></td>
+    <td align="right"><TMPL_VAR NAME="wstf"></td>
+    <td align="right"><TMPL_VAR NAME="ass"></td>
+    <td align="right"><TMPL_VAR NAME="awd"></td>
+    <td align="right"><TMPL_VAR NAME="alw"></td>
+    <td align="right"><TMPL_VAR NAME="aos"></td>
+    <td align="right"><TMPL_VAR NAME="asl"></td>
+    <td align="right"><TMPL_VAR NAME="asy"></td>
+    <td><a href="#<TMPL_VAR NAME="paragraphno">"> <TMPL_VAR NAME="linktxt">...</a></td>
+  </tr>
+  </TMPL_LOOP> 
+</table>
+<hr>
+<TMPL_LOOP NAME=PARAGRAPH> 
+<a name="<TMPL_VAR NAME="paragraphno">"></a>
+<TMPL_LOOP NAME=SENTENCE> 
+<table>
+  <tr> 
+    <td bgcolor="#66FF66">AM</td>
+    <td bgcolor="#66FF66">SM</td>
+    <td bgcolor="#66FF66">WF</td>
+    <td bgcolor="#CCCCCC">WT</td>
+    <td bgcolor="#CCCCCC">LW</td>
+    <td bgcolor="#CCCCCC">EW</td>
+    <td bgcolor="#CCCCCC">SB</td>
+    <td bgcolor="#CCCCCC">LS</td>
+<TMPL_LOOP NAME=WORD1> 
+<td><TMPL_VAR NAME="word"></td>
+</TMPL_LOOP> 	
+  </tr><tr> 
+    <td align="right"><TMPL_VAR NAME="amdahl"></td>
+    <td align="right"><TMPL_VAR NAME="smog"></td>
+    <td align="right"><TMPL_VAR NAME="wstf"></td>
+    <td align="right"><TMPL_VAR NAME="swd"></td>
+    <td align="right"><TMPL_VAR NAME="slw"></td>
+    <td align="right"><TMPL_VAR NAME="sos"></td>
+    <td align="right"><TMPL_VAR NAME="ssl"></td>
+    <td align="right"><TMPL_VAR NAME="ssy"></td>
+<TMPL_LOOP NAME=WORD2> 
+<td align="center"><TMPL_VAR NAME="wsl"></td>
+</TMPL_LOOP> 
+  </tr>
+</table>
+</TMPL_LOOP> 
+<hr>
+</TMPL_LOOP> 
+
+<dl>
+  <dt><strong><a name="wt"></a>WT</strong></dt>
+  <dd>Anzahl der W&ouml;rter</dd>
+  <dt><strong><a name="lw"></a>LW</strong></dt>
+  <dd>Anzahl der W&ouml;rter mit 6 oder mehr Zeichen</dd>
+  <dt><strong><a name="ew"></a>EW</strong></dt>
+  <dd>Anzahl der einsilbigen W&ouml;rter</dd>
+  <dt><strong><a name="sb"></a>SB</strong></dt>
+  <dd>Anzahl der Silben</dd>
+  <dt><strong><a name="ls"></a>LS</strong></dt>
+  <dd>Anzahl der W&ouml;rter mit 3 oder mehr Silben</dd> 
+</dl>
+<hr>
+<h3><a name="format"></a>Formatierungshinweise</h3>
+<dl>
+  <dt><strong>Abs&auml;tze</strong></dt>
+  <dd>Abs&auml;tze m&uuml;ssen durch eine Leerzeile getrennt sein.</dd>
+  <dt><strong>Satzende</strong></dt>
+  <dd>Als Satzendezeichen werden '.', '?' und '!' mit einem folgenden Leerzeichen 
+    und das Absatzende akzeptiert. Diese Zeichen werden ignoriert, wenn sie zwischen 
+    einem Klammerpaar '(' und ')' oder in einem Zitat, gekennzeichnet mit '&#8222;' und '&#8220;', vorkommen. 
+    Ebenfalls wird '.' als Satzende nicht akzeptiert, wenn das Zeichen vor dem 
+    Punkt eine Ziffer oder ein Grossbuchstabe ist.
+  </dd>
+</dl>
+    <hr></hr>
+<h3><a name="index"></a>Lesbarkeitsindices</a></h3>
+<strong>Allgemeine Hinweise:</strong> <br>
+Man sollte den Text in drei Schritten untersuchen: Zuerst bzgl. des SMOG-Index 
+(Verringerung langsilbiger Worte), danach bzgl. des Amdahl-Index (Verringerung 
+der Satzl&auml;ngen) und zum Schlu&szlig; bzgl. der 1. Wiener Sachtextformel (Verringerung 
+langer Worte). Hohe Werte der Indizes weisen auf komplexe Text, Abs&auml;tze bzw. 
+S&auml;tze hin. 
+<dl>
+  <dt><a name="smog"><strong>Normierter SMOG-Index von Bamberger</strong></a></dt>
+  <dd>Der normierte SMOG-Index von Bamberger berechnet sich als<br>
+    <br>
+    <table cellspacing="0">
+      <tr> 
+        <td>&nbsp;</td>
+        <td>sqrt(Anzahl der W&ouml;rter mit 3 oder mehr Silben)</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr> 
+        <td>SMOG=</td>
+        <td><hr></td>
+        <td>-2</td>
+      </tr>
+      <tr> 
+        <td>&nbsp;</td>
+        <td>sqrt(Anzahl der W&ouml;rter / 100)</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    <br>
+    Hohe Werte werden durch viele langsilbige Werte verursacht.</dd>
+  <dt><br>
+    <a name="amdahl"><strong>Modifizierter Amdahl Verst&auml;ndlichkeitsindex</strong></a></dt>
+  <dd>Der modifizierte Amdahl Verst&auml;ndlichkeitsindex berechnet sich als<br>
+    <br>
+    <table cellspacing="0">
+      <tr> 
+        <td>&nbsp;</td>
+        <td>Anzahl der W&ouml;rter</td>
+        <td>&nbsp;</td>
+        <td>Anzahl der Silben</td>
+      </tr>
+      <tr> 
+        <td>Amdahl =</td>
+        <td><hr></td>
+        <td>+58,5*</td>
+        <td><hr></td>
+      </tr>
+      <tr> 
+        <td>&nbsp;</td>
+        <td>Anzahl der S&auml;tze</td>
+        <td>&nbsp;</td>
+        <td>Anzahl der W&ouml;rter</td>
+      </tr>
+    </table>
+    <br>
+    Hohe Werte k&ouml;nnen zum einen durch lange S&auml;tze verursacht werden 
+    oder viele langsilbige Worte. </dd>
+  <dt>&nbsp;</dt>
+  <dt><a name="wstf"><strong>1. Wiener Sachtextformel (WSTF)</strong></a></dt>
+  <dd>Die 1. Wiener Sachtextformel berechnet sich als<br>
+    <br>
+    <table cellspacing="0">
+      <tr> 
+        <td>&nbsp;</td>
+        <td valign="bottom">Anzahl der W&ouml;rter mit 3 <br>
+          oder mehr Silben</td>
+        <td valign="bottom">&nbsp;</td>
+        <td valign="bottom">Anzahl der W&ouml;rter</td>
+        <td valign="bottom">&nbsp;</td>
+        <td valign="bottom">Anzahl der W&ouml;rter mit 6 <br>
+          oder mehr Zeichen</td>
+        <td valign="bottom">&nbsp;</td>
+        <td valign="bottom">Anzahl der einsilbigen W&ouml;rter</td>
+      </tr>
+      <tr> 
+        <td>WSTF=0.1935*</td>
+        <td><hr></td>
+        <td>+0.1672*</td>
+        <td><hr></td>
+        <td>+0.1297*</td>
+        <td><hr></td>
+        <td>-0.0327*</td>
+        <td><hr></td>
+      </tr>
+      <tr> 
+        <td>&nbsp;</td>
+        <td valign="top">Anzahl der W&ouml;rter</td>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">Anzahl der S&auml;tze</td>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">Anzahl der W&ouml;rter</td>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">Anzahl der S&auml;tze </td>
+      </tr>
+    </table>
+    <br>
+    Hohe Werte werden verursacht durch viele langsilbige Worte, lange S&auml;tze 
+    oder viele Worte mit grosser L&auml;nge, z.B. zusammengesetzte Worte.</dd>
+</dl>
+<hr>
+Generiert mit <a href="http://mars.wiwi.hu-berlin.de/lesbarkeit/lesbarkeit.html"><tt>lesbarkeit.pl</tt></a>: (C) 2003-2016 Sigbert Klinke
+</body></html>
+
